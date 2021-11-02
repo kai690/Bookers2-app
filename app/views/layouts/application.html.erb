@@ -14,16 +14,16 @@
     <!--ヘッダー-->
     <header>
       <!--ナビゲーションバー--> 
-      <nav class = "navbar navbar-expand-lg">
+      <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
         <div class = "container">
           <!--ロゴ-->
-          <a class="navbar-brand p-3" href="/">Bookers</a>
+          <%= link_to "Bookers", root_path, class: 'navbar-brand p-3' %>
           <!--メニュー-->
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to 'Home', books_path, class: 'nav-link' %>
+                <%= link_to 'Home', books_path, class: 'fas fa-home nav-link text-light' %>
               </li>
               
               <li class="nav-item">
@@ -40,18 +40,18 @@
               
               <% else %>
               <li class="nav-item">
-                <%= link_to 'Home', books_path, class: 'nav-link' %>
+                <%= link_to 'Home', books_path, class: 'fas fa-home nav-link text-light' %>
               </li>
               
               <li class="nav-item">
-                <%= link_to 'About', new_user_session_path, class: 'nav-link' %>
+                <%= link_to 'About', new_user_session_path, class: 'fas fa-link nav-link text-light' %>
               </li>
               
               <li class="nav-item">
-                <%= link_to "Sign up", root_path, class: 'nav-link' %>
+                <%= link_to "Sign up", root_path, class: 'fas fa-user nav-link text-light' %>
               </li>
               <li class="nav-item">
-                <%= link_to "Log in", new_user_session_path, class: 'nav-link' %>
+                <%= link_to "Log in", new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %>
               </li>
               <% end %>
             </ul>
@@ -66,7 +66,13 @@
     </main>
     
     <footer>
-      <p>CopyRight Infratop.inc</p>
+      <div class ='container mt-5'>
+        <div class ='row'>
+          <div class ='mx-auto'>
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
     </footer>
     
   </body>
