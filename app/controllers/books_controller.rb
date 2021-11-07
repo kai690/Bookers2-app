@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
 
   def create
-    @Book = Book.new(book_params)
-    @Book.user_id = current_user.id
-    @Book.save
+    @book = Book.new(book_params)
+    @book.user_id = current_user.id
+    @book.save
     redirect_to books_path
   end
 
@@ -16,9 +16,6 @@ class BooksController < ApplicationController
   
   def update
   end
-  
-  def update
-  end
 
   def destroy
   end
@@ -26,6 +23,6 @@ class BooksController < ApplicationController
   private
   
   def book_params
-    params.require(:book).permit(:title, :body)
+    params.permit(:title, :body)
   end
 end
