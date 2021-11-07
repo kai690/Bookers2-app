@@ -19,7 +19,11 @@
                   <%= book.user.name %>
                 <% end %>
               </td>
-              <td><%= book.title %></td>
+              <td>
+                <%= link_to book_path(book.id) do %>
+                <%= book.title %>
+                <% end %>
+              </td>
               <td><%= book.body %></td>
             </tr>
           <% end %>
