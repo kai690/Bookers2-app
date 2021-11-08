@@ -3,7 +3,7 @@
 <div class = 'container'>
   <div class = 'row'>
     
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-md-3">
       
       <h2>User info</h2>
       <table class = 'table'>
@@ -82,10 +82,10 @@
               <td><%= @book.body %></td>
               <% if @book.user == current_user %>
               <td>
-                  <%= link_to "edit", edit_book_path(@book), class:'btn btn-success' %>
+                  <%= link_to "Edit", edit_book_path(@book), class:'btn btn-success' %>
               </td>
               <td>
-                <%= link_to "delete", book_path(@book), method: :delete, class:'btn btn-danger' %>
+                <%= link_to "Destroy", book_path(@book), method: :delete, class:'btn btn-danger' %>
               </td>
               <% end %>
             </tr>
